@@ -1,0 +1,2 @@
+scripts:
+  start: deno run --allow-net --allow-read --unstable https://cdn.jsdelivr.net/gh/vanillawc/wc-router@1/server.ts
