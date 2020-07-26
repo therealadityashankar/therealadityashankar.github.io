@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://cdn.jsdelivr.net/gh/vanillawc/wc-router@1/src/index.js" charset="utf-8" type="module"></script>
+    <script type="module" 
+            src="https://cdn.jsdelivr.net/gh/vanillawc/wc-markdown@1/index.js"></script>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link 
+     rel="stylesheet" 
+     href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="icon" type="image/png" href="/content/images/favicon.png">
+    <title>Aditya Shankar</title>
+  </head>
+  <body>
+    <div class="awsm">
+      <header>
+        <h1>Aditya Shankar</h1>
+        <nav>
+          <r-a href="/">main</r-a> /
+          <r-a href="/blog">blog</r-a> /
+        </nav>
+      </header>
+    </div>
+    <wc-router>
+      <wc-route path="/" file="/content/pages/main.html"></wc-route>
+      <wc-route path="/blog" file="/content/pages/blog.html"></wc-route>
+      <wc-route path="/blog/how-i-code" file="/content/blog/how-i-code.html"></wc-route>
+      <wc-route path="/path:all"><p>404, no such page</p></wc-route>
+    </wc-router>
+    <hr>
+    <p>css by <a href="https://newcss.net/">newcss</a> + icons by <a href="https://icons8.com/">icons8</a></p>
+  </body>
+</html>
