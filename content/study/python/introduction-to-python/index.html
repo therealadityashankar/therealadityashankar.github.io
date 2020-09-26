@@ -1,0 +1,133 @@
+<wc-markdown>
+  <script type="wc-content">
+    # Introduction to python
+
+    okay, so you wanna learn Python, thats awesome !
+
+    here's a little secret to learning programming, if you truly
+    want to learn to be an expert, fall in love with the language,
+    try to do stuff not because you were taught that, but because its cool,
+    try to do stuff because you can, just for the thrill of it.
+
+  </script>
+</wc-markdown>
+
+<wc-code mode="python">
+  <script type="wc-content">
+    print("Welcome to python people !")
+  </script>
+</wc-code>
+
+<wc-markdown>
+  <script type="wc-content">
+    ## lets create a simple question answer service !
+
+    ### printing
+
+    firstly, introduction to the `print` function,
+
+    the print function, when used with 'strings' or 'numbers', simply
+    prints the output, we'll learn more in depth about these data-types
+    in the future
+  </script>
+</wc-markdown>
+
+<wc-code mode="python">
+  <script type="wc-content">
+    print("Hello !, what is your name ?")
+  </script>
+</wc-code>
+
+
+<wc-markdown>
+  <script type="wc-content">
+    ### variables and inputs !
+
+    but wait !, thats just a question, how do we receive answers too ?,
+
+    **new concept**: the input function !
+
+    welcome, the `input` function !
+
+    the `input` function simply asks the user for text, then returns the
+    entered text
+
+    **new concept**: variables !
+
+    a variable in python is a place where you can store values !
+    
+    try out the code below !
+  </script>
+</wc-markdown>
+
+
+<wc-code mode="python">
+  <script type="wc-content">
+    print("Hello !, what is your name ?")
+    name = input("enter your name here !")
+    print("Hi " + name + "!")
+  </script>
+</wc-code>
+
+
+<wc-markdown>
+  <script type="wc-content">
+    what did we just do up there with the `+` symbol ?
+
+    well, we added them, when 2 strings in python are added with
+    the `+` operator, they combine and turn into 1 string.
+    wow, nice !
+
+    ### numbers
+
+    now, here is a something I want anyone seeing this program to know,
+
+    I want them to know that `3` is my favourite number
+    although, it changes on a daily basis, cause I'm like that,
+
+    so I don't want to directly print it, and make it easy to update !
+  </script>
+</wc-markdown>
+
+<wc-code mode="python">
+  <script type="wc-content">
+    favourite_number = 3
+    print("Hello !, what is your name ?")
+    name = input("enter your name here !")
+    print("Hi " + name + "!")
+    print("My favourite number is " + favourite_number)
+  </script>
+</wc-code>
+
+<wc-markdown>
+  <script type="wc-content">
+    ### converting from a number to a string
+    oh no !, why did that throw an Error ?,
+
+    well python does not allow you to add "Strings" and "Numbers",
+
+    okay, I guess we didn't formally define the data types
+
+    A string is essentially a group a characters, we define strings via
+    starting and ending with `"` or `'` characters,
+
+    for example: `"Aditya Shankar"`, `'Python'`, `"Hello !, what is your name ?"` are strings !
+
+    A number is a, well number, such as `31212`, or `21` or `6.32`
+
+    now, python does not allow you to add strings and numbers, so, now,
+
+    we have to convert the number into a string, and we can do this via
+    the `str()` function
+  </script>
+</wc-markdown>
+
+<wc-code mode="python">
+  <script type="wc-content">
+    favourite_number = 3
+    print("Hello whats your name ?")
+    name = input("enter your name here !")
+    print("Hi " + name + "!")
+    print("My favourite number is " + str(favourite_number))
+  </script>
+</wc-code>
