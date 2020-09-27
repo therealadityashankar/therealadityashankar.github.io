@@ -1,0 +1,123 @@
+<div>
+  <wc-markdown>
+    <script type="wc-content">
+      # Strings
+
+      every programming language has some form or ability to allow you to insert text input, so does python
+
+      ### some string examples
+
+      some string examples include
+
+      `'Python'`, `"Aditya Shankar"`, `'Jasmine'`, `"Jasmine's house"`
+
+      ## Basic string building
+
+      strings may start with single-quotes `'` or double-quotes `"` and have to end with the same type of quote they started with
+
+      ## string escaping
+
+      one of the obvious thing you may ask with the above task is how would you add a single-quote or a double-quote to a string, that is created using the same notation?
+
+      well, you use string escaping !
+
+      for eg: `'Alex\'s grammer mistakes'`, `"he said \"I don't like this\""`
+
+      string escaping also allows one to add special characters in the string, such as newlines (with "\n"), tabs (with "\t"), backslash (with "\\")
+
+      for eg: `'I like chocolate\nHe likes cake'`, `'this is a slash - \\'`
+
+      ## triple quoted strings
+
+      you may also choose to start strings via triple quotes `"""` and `'''`, the advantage of these are that these can contain multiline texts,
+
+      so, try, 
+
+      ```
+      """
+      print("""abc, def, 
+      ghi, jkl,
+      mno""")
+      """
+      ```
+
+      these are generally put in the start of documents and function definitions to show what the file does 
+
+      ## r-strings
+
+      there are some cases where string escaping makes things tougher and not easier, if, for example you need to add the literal term \n, or you need many backslashes,
+
+      r-strings don't follow escaping rules and come in plainly
+
+      try: `print(r"abc\\d")`
+
+      ## string formatting
+
+      ### f-strings
+
+      the best way to format strings in python is via `f-strings` in python
+
+      f-strings allow easy string interpolation
+
+      here is a basic example
+
+      ```python
+      name = "Avnish"
+      age = 29
+
+      print(f"Hi my name is {name}, and my age is {age}")
+      ```
+
+      essentially all content inside is converted and formatted accordingly
+
+      you may also have numeric formatting in f-strings via `f'result: {value:{width}.{precision}}'`
+
+      for example, try: `print(f"result : {42:2.5f})"`
+
+      heres a fuller example:
+
+      ```python
+      value = 413223.123123312
+
+      print(f"value: {value:.2f}")
+      ```
+
+      ### str.format is also another method to format strings
+
+      `print("I have {} apples, and they're really nice".format(69))`
+
+      ### extra articles
+
+      real python article : https://realpython.com/python-string-formatting/#2-new-style-string-formatting-strformat
+
+      python docs : https://docs.python.org/3.8/library/stdtypes.html#text-sequence-type-str
+
+      ## string accessing and length
+
+      you may get string indexes the same way list values are accessable
+
+      try:
+      ```
+      a = "hello people"
+
+      print(a[0])
+      print(a[4])
+      ```
+
+      string lengths may also be accessed via the `len()` function
+
+      try:
+      ```
+      print(len("123456"))
+      ```
+
+      strings are also iterable
+
+      try:
+      ```
+      for l in "123456":
+          print(l)
+      ```
+    </script>
+  </wc-markdown>
+</div>

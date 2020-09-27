@@ -1,0 +1,321 @@
+<div>
+  <wc-markdown>
+    <script type="wc-content">
+      # lists
+
+      lists are data types that may contain absolutely anything in python
+
+      ```
+      a = ["something", "whatever", 0, 1, 2, 3, 4, 5, 2131.123123]
+
+      print(a)
+
+      b = ["asdas", 21", ["asdfasd", "asdasd"]]
+      ```
+
+      ## explaination of by reference and by value
+
+      here's 2 examples
+
+      example 1:
+
+      ```
+      a = 1
+      b = a
+
+      b += 4
+
+      print(a)
+      print(b)
+      ```
+
+      example 2:
+      ```
+      a = [1, 2, 3]
+      b = a
+
+      b[0] = 9999
+      print(a)
+      ```
+
+      in example 1, the value of `a` does not change, however, in example 2 the value of `a` does change, this is because lists are copied by reference (a and b have the same item, and point to the same thing)
+
+      ## explaination of multability
+
+      strings cannot be assigned to (as we saw in the last section)
+
+      ## some list methods
+
+      ### x in list
+
+      checks if an item is in a list
+
+      example 1:
+      `print(5 in [1, 2, 3, 4, 5])`
+      
+      example 2:
+      `print(6 in [1, 2, 3, 4, 5])`
+
+      ### x not in list
+
+      example 1:
+      `print(5 not in [1, 2, 3, 4, 5])`
+      
+      example 2:
+      `print(6 not in [1, 2, 3, 4, 5])`
+
+      ### list1 + list2
+
+      return a new which contains the values of the 2 lists added
+
+      example :
+
+      ```
+
+      a = [1, 2, 3, 4, 5]
+      b = [6, 7, 8, 9, 10]
+
+      print(a + b)
+      print(a, b)
+      ```
+
+      ### list1*n or n*list2
+      multiply the list n times, and create a new list with the value
+      repeated n times
+
+      `print(4*[1, 2, 3, 4, 5])`
+
+      ### list[i]
+      access the nth item
+
+      `print([1, 2, 3, 4, 5][0])`
+
+      ### list[i] = value
+      set the value for the kth item
+
+      ```
+      a = [0, 1, 2, 3, 4, 5]
+
+      a[0] = 90192
+
+      print(a)
+      ```
+
+      ### list[start:end] and negative indexing
+
+      create a sublist with the value from start to end
+
+      ```
+      a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      b = a[0:4]
+      c = a[:4]
+      d = a[4:]
+      e = a[:] # copies the list
+      f = a[4: -2]
+      g = a[4:-1]
+
+      print(a)
+      print(b)
+      print(c)
+      print(d)
+      print(e)
+      print(f)
+      print(g)
+      ```
+
+      ### list[start:end:step]
+
+      ```
+      a = [0, 1, 2, 3, 4, 5, 6]
+      print(a[0, -1, 2])
+      ```
+
+      ### del list[index] and del list[start:end]
+      remove a certain item or a set of items
+
+      ```
+      a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+      print(a)
+      del a[0]
+      print(a)
+      del a[0:2]
+      print(a)
+      ```
+
+      ### list.append
+
+      ```
+      a = [0, 1, 2, 3, 4, 5, 6]
+
+      print(a)
+      a.append(7)
+      print(a)
+      ```
+
+      ### list.clear() (or `del list[:]`)
+
+      empty the list
+
+      ```
+      a = [0, 1, 2, 3]
+      a.clear()
+
+      print(a)
+      ```
+
+      ### list.copy() (and explaination of shallow and deep copy)
+
+      a deep copy contains new values, a shallow copy contains references
+
+      ```
+      a = [0, 1, 2, 3, 4, 5]
+
+      b = a.copy()
+
+      print(b)
+      b[0] = 44
+
+      print(b)
+      print(a)
+
+      a = [[0, 1, 2, 3, 4, 5]]
+      b = a.copy()
+
+      print(b)
+
+      b[0][4] = 212132
+      
+      print(b)
+      print(a)
+      ```
+
+      ### list.extend(list2)
+
+      ```
+      a = [1, 2, 3, 4, 5, 6]
+
+      print(a)
+      a.extend([1, 132, 123])
+      print(a)
+      ```
+
+      ### list *= n
+
+      ```
+      a = [1, 2, 3, 4, 5, 6]
+
+      print(a)
+      a.extend([1, 132, 123])
+      print(a)
+      ```
+
+      ### list.insert(index, value)
+      insert a value at an index
+
+      ```
+      a = [1, 2, 3, 4, 5]
+      a.insert(3, 5)
+
+      print(a)
+      ```
+
+      ### list.pop(index)
+      remove a value at a specified index, if no index is specified the last value will be removed
+
+      ```
+      a = [1, 2, 3, 4, 5, 6, 7, 8]
+      a.pop()
+      print(a)
+
+      a = [1, 2, 3, 4, 5]
+      a.pop(2)
+      print(a)
+      ```
+
+      ### list.remove(value)
+      remove the first index of a value from a list
+
+      ```
+      a = ["a", "b", r'\\\']
+
+      a.remove("b")
+      print(a)
+      ```
+      ### list.reverse() and reversed
+      reverse a list in-place
+
+      ```
+      a = [0, 1, 2, 3, 4, 5]
+      a.reverse()
+
+      print(a)
+
+      b = [0, 1, 2, 3, 4, 5]
+
+      print(reversed(b))
+      ```
+
+      ### len(list)
+
+      get the length of the list
+
+      print(len([0, 1, 2, 3, 4, 5]))
+
+      ### min(list)
+
+      get the minimum value from a list
+
+      `print(min([0, 1, 2, 3, 4, 5, 6, 7]))`
+
+      ### max(list)
+
+      get the maximum value from a list
+      `print(max([0, 1, 2, 3, 4, 5, 6, 7]))`
+
+      ### list.index(value, start, end)
+
+      get the first occurance of an item
+
+      ```
+      a = [0, 1, 2, 3, 4, 5, 1, 2, 3]
+
+      print(a.index(1))
+      print(a.index(1, 2))
+      print(a.index(1, 2, 9))
+      ```
+
+      ### list.sort() and sort(list)
+      sort the numbers in a list
+
+      ```
+      a = [12, 132, 12, 11, 3, 122, 99, 69]
+      b = [12, 132, 12, 11, 3, 122, 99, 69]
+
+      a.sort()
+      print(a)
+      print(sorted(b))
+      print(b)
+      ```
+
+      ### looping lists
+      iterate through a list
+
+      ```
+      a = [0, 1, 2, 3, 4, 5, 6]
+      b = []
+
+      for val in a:
+          b.append(2*val)
+
+      print(a)
+      print(b)
+      ```
+
+      ### also see:
+      methods : https://docs.python.org/3.8/library/stdtypes.html#typesseq-common
+      mutable methods : https://docs.python.org/3.8/library/stdtypes.html#typesseq-mutable
+
+    </script>
+  </wc-markdown>
+</div>
