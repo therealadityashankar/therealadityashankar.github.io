@@ -1,0 +1,59 @@
+<div>
+  <wc-markdown><script type="wc-content">
+      # for loops
+
+      so, we have been introduced to lists, and if you've prior
+      programming knowledge, you'd know about loops
+
+      python has 2 kinds of loops, the for loop and the while loop
+
+      try out : 
+  </script></wc-markdown>
+
+  <wc-code mode="python"><script type="wc-content">
+      for i in [0, 1, 2, 3, 4, 5, 6]:
+          print(i)
+  </script></wc-code>
+
+  <wc-markdown><script type="wc-content">
+      now, pythonic loops are different from loops in other languages,
+      as in they go over lists instead of using numeric comparisions and 
+      a number, loops also go over iterators, but we'll do a deep dive
+      into those later
+
+      one think you may have noticed is it is very inefficient to type
+      all the numbers we need to go through (any may not always be
+      possible)
+
+      there in comes the `range` function !
+
+      try out :
+  </script></wc-markdown>
+
+  <wc-code mode="python"><script type="wc-content">
+      for i in range(6):
+          print(i)
+  </script></wc-code>
+
+  <wc-markdown mode="python"><script type="wc-content">
+      the range function supports 1 to 3 arguments, if one argument is
+      supplied (like above), the loop will loop through all numbers from
+      0 -> your supplied number
+
+      also try out :
+  </script></wc-markdown>
+
+  <wc-code mode="python"><script type="wc-content">
+      # 2 arguments
+      print("range with 2 arguments")
+
+      for i in range(1, 6):
+          print(f"numero : {i}")
+
+      # 3 arguments
+      print("range with 3 arguments")
+
+      for i in range(0, 6, 2):
+          print(f"numero : {i}")
+  </script></wc-code>
+</div>
