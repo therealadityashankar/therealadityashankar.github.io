@@ -1,0 +1,68 @@
+<wc-markdown><script type="wc-content">
+    # booleans, comparisions and conditions
+
+    lets do a few number comparisions, run the code snippets below
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+    num_1 = 10
+    num_2 = 213412
+    num_3 = 131241
+    num_4 = 1233222
+    num_5 = 5555
+    num_6 = 5555
+
+    if num_1 > num_2:
+        print("num_1 is greater")
+    else:
+        print("num_2 is greater")
+
+    # comparisions can also be stored !
+    num3_less_than_num4 = num_3 <= num_4
+
+    if num3_less_than_num4: 
+        print("num_3 is less than num_4")
+
+    if num_5 == num_6: print("num_5 and num_6 are equal !")
+
+    if num_5 == num_6 and num1 > num2:
+        print("booyah !")
+
+    if num_5 == num_6 or num1 < num2:
+        print("heya !")
+</script></wc-code>
+
+<wc-markdown><script type="wc-content">
+    ## basic comparision operators: 
+    - `>` : greater than, checks if the number on the left is greater than the number on the right
+    - `<` : less than, checks if the number on the left is less than the number on the right
+    - `>=` : less than or equal to, checks if the number on the left is less or equal to than the number on the right
+    - `<=` : greater than or equal to, checks if the number on the left is greater or equal to than the number on the right
+    - `==` : equality check, checks if both numbers are equal
+    - `and` : checks if the condition of the right and left are true
+    - `or` : checks if the condition on the right or left is true
+
+
+    ## examples of comparisions and loops
+
+    say we've a bunch of stocks and we only want the stocks whose value is greater than a certain
+    amount, well, here is how we can check for stocks valued greater than a certain amount
+</script></wc-markdown>
+
+
+<wc-code mode="python"><script type="wc-content">
+    stocks = ["AAP", "BBP", "CARL", "MNOP", "QRS", "TUV", "MMM"]
+    stock_prices = [12, 123, 500, 312, 131, 111, 301]
+    min_stock_price = 200
+    good_stocks = []
+
+    for i in range(len(stocks)):
+        stock = stocks[i]
+        stock_price = stock_prices[i]
+
+        if stock_price >= min_stock_price:
+            good_stocks.append(stock)
+
+    print(f"earlier stocks : {stocks}")
+    print(f"good stocks : {good_stocks}")
+</script></wc-code>
