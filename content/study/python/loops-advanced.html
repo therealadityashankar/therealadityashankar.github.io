@@ -1,0 +1,122 @@
+<div>
+  <wc-markdown><script type="wc-content">
+      # advanced loops
+
+      we're going to talk about
+
+      - break statements
+      - continue statements
+      - list comprihension
+      - nested loops
+      - for else loops
+
+      ## break statements
+
+      another way to break out of loops is via the
+      break statement
+
+      try the code below
+  </script></wc-markdown>
+
+  <wc-code mode="python"><script type="wc-content">
+      i = 0
+
+      while True:
+          if i >= 5:
+              break
+
+          print(i)
+
+          i += 1
+  </script></wc-code>
+
+  <wc-markdown><script type="wc-content">
+      # continue statement
+
+      the continue statement allows you to "skip" the rest of
+      certain code in a for loop,
+
+      try out the example below
+  </script></wc-markdown>
+  <wc-code mode="python"><script type="wc-content">
+      stocks = ["ABC", "DEF", "GHI", "JKL", "MNO", "PQR", "STU", "VWX"]
+      stock_prices = [99, 123, 231, 333, 222, 211, 413, 123, ]
+
+      for i in range(len(stocks)):
+          stock = stocks[i]
+          stock_price = stock_prices[i]
+
+          if stock_price < 200:
+              continue
+
+          print(f"check out stock {stock} at {stock_price}")
+  </script></wc-code>
+
+  <wc-markdown><script type="wc-content">
+      # list comprihension
+
+      sometimes our operations are really small and
+      we don't really need big loops for them
+
+      try out the code below:
+  </script></wc-markdown>
+
+  <wc-code mode="python"><script type="wc-content">
+      # simple example
+      a = [1, 2, 3, 4, 5, 6, 7, 8]
+      print(a)
+
+      b = [i**2 for i in a]
+      print(b)
+
+      c = [i**2 for i in a if i > 3]
+      print(c)
+  </script></wc-code>
+
+  <wc-markdown><script type="wc-content">
+      # nested loops
+
+      loops can also go inside other loops, these have
+      various purposes, here is a huge example
+  </script></wc-markdown>
+
+  <wc-code mode="python"><script type="wc-content">
+      a = [[1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9]]
+
+      for l in a:
+          for num in l:
+            print(f"from list : {l}")
+  </script></wc-code>
+
+  <wc-markdown><script type="wc-content">
+      # for-else loops
+
+      ok, this is a little interesting,
+
+      try the code below
+  </script></wc-markdown>
+
+  <wc-code mode="python"><script type="wc-content">
+      a = [1, 2, 3, 4, 5, 6, 7, 8]
+      min_num = 4
+
+      for i in a:
+          if i > min_num:
+              print(f"has num greater than {min_num}")
+              break
+      else: # executes if the break statement is never called
+          print(f"has no num greater than {min_num}")
+
+
+      min_num = 9
+
+      for i in a:
+          if i > min_num:
+              print(f"has num greater than {min_num}")
+              break
+      else: # executes if the break statement is never called
+          print(f"has no num greater than {min_num}")
+  </script></wc-code>
+</div>
