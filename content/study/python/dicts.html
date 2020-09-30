@@ -1,0 +1,90 @@
+<div>
+  <wc-markdown>
+    <script type="wc-content">
+      # Dicts
+
+      a really cool feature of python is dicts, these are key value storage mechanisms that allow you to store an retrieve values with a denoted keyword
+
+      ## dict value accessing
+
+      dict values can be accessed via the index string name
+    </script>
+  </wc-markdown>
+
+  <wc-code mode="python">
+    <script type="wc-content">
+       values = {
+          "names" : ["Ajit", "Rahul", "Aditya", "Divya"],
+       }
+
+       print(values["names"])
+    </script>
+  </wc-code>
+
+  <wc-markdown>
+    <script type="wc-content">
+      ## adding to dicts
+
+      dict indexing works nearly the same way as string/list indexing,
+      except with words
+    </script>
+  </wc-markdown>
+
+  <wc-code mode="python">
+    <script type="wc-content">
+       values = {
+          "names" : ["Ajit", "Rahul", "Aditya", "Divya"],
+       }
+
+       values["cake"] = "chocolate"
+
+       print(values["cake"])
+    </script>
+  </wc-code>
+
+  <wc-markdown>
+    <script type="wc-content">
+      ## getting all keys
+
+      you can get all the keys in a dict with the `dict.keys()` function
+    </script>
+  </wc-markdown>
+
+  <wc-code mode="python">
+    <script type="wc-content">
+       values = {
+          "names" : ["Ajit", "Rahul", "Aditya", "Divya"],
+          "time" : "7:30 PM",
+          "species" : "Human",
+          "stocks held": ["MMM", "SPY", "AAPL", "^GSPC"]
+       }
+
+       values["cake"] = "chocolate"
+
+       print(values.keys()) 
+    </script>
+  </wc-code>
+
+  <wc-markdown>
+    <script type="wc-content">
+      ## deleting from dicts
+
+      you can delete dict items with the `del` keyword
+    </script>
+  </wc-markdown>
+
+  <wc-code mode="python">
+    <script type="wc-content">
+       values = {
+          "names" : ["Ajit", "Rahul", "Aditya", "Divya"],
+       }
+
+       values["cake"] = "chocolate"
+
+       print(values.keys())
+       del values["names"]
+
+       print(values.keys()) 
+    </script>
+  </wc-code>
+</div>
