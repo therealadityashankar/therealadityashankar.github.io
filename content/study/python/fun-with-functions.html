@@ -1,0 +1,143 @@
+<div>
+  <wc-markdown>
+    <script type="wc-content">
+      # fun with functions
+
+      aah, all that studying must've been so boring right ?,
+
+      lets do some cool stuff with all that we've learnt
+
+      ## lets make a complete functional tic-tac-toe game
+
+      first lets see how we can represent a 3x3 grid
+
+      try doing this all by yourself, Hint : to avoid printing
+      a newline in the end of the `print()` function use
+      `print(value, end="")`, and to covert a string to
+      a number use `int(string_val)`
+      
+      ## THE ANSWER IS BELOW
+      ## TRY IT YOURSELF FIRST
+      ## PLEASE !
+      ## 1
+      ## 2
+      ## 3
+      ## 4
+      ## 5
+    </script>
+  </wc-markdown>
+
+  <wc-code mode="python">
+    <script type="wc-content">
+      # one way to represent a grid is via lists
+      xogrid = [[None, None, None,],
+                [None, None, None,],
+                [None, None, None,]]
+
+      # as this can represent each row and column
+      # None denotes a state of nothing inside
+
+      # example grid
+      xogrid = [['x', 'o', 'o',],
+                ['o', 'x', 'x',],
+                ['o', 'x', None,]]
+    </script>
+  </wc-code>
+
+  <wc-markdown>
+    <script type="wc-content">
+      ## printing the grid
+
+      we should have a way to prind the xogrid
+      between states right ?
+    </script>
+  </wc-markdown>
+
+  <wc-code mode="python">
+    <script type="wc-content">
+      def printxo(grid):
+          for column in grid:
+              for value in column:
+                  nval = value if value is not None else " "
+                  # alternatively
+                  # you can write the above statement
+                  # as,
+                  # if value is None:
+                  #     nval = " "
+                  # else:
+                  #     nval = value
+                  print(f"|{nval}", end="")
+              print("|")
+
+      xogrid = [['x', 'o', 'o',],
+                ['o', 'x', 'x',],
+                ['o', 'x', None,]]
+
+      printxo(xogrid)
+    </script>
+  </wc-code>
+
+  <wc-markdown>
+    <script type="wc-content">
+      ## taking user input
+
+      now we need to take user input and modify the grid,
+
+      this is quite easy
+    </script>
+  </wc-markdown>
+
+  <wc-code mode="python">
+    <script type="wc-content">
+      current_player = 'x'
+      column = int(input("enter column"))
+      row = int(input("enter row")
+    </script>
+  </wc-code>
+
+  <wc-markdown>
+    <script type="wc-content">
+      # checking complete
+
+      but we need to take user input continuously !
+      i.e. via while loops, until all blocks are full
+
+      so we need 2 things
+      - a check blocks full function
+      - a while loop that keeps taking in values and modifying the grid until the check block function shows true
+      - to change the current_player with every turn
+    </script>
+  </wc-markdown>
+
+  <wc-code mode="python">
+    <script type="wc-content">
+      grid = [[None, None, None,],
+              [None, None, None,],
+              [None, None, None,]]
+
+      def check_blocks_full(grid):
+          for column in grid:
+              for row in column:
+                  if row is None:
+                      return False
+          return True
+
+      current_player = 'x'
+
+      while True:
+          printxo(grid)
+          column = int(input("enter column"))
+          row = int(input("enter row")
+          grid[column][row] = current_player
+
+          if current_player = 'x':
+              current_player = 'o'
+          else:
+              current_player = 'x'
+
+          if check_blocks_full(grid):
+             printxo(grid)
+             break
+    </script>
+  </wc-code>
+</div>
