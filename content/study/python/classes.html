@@ -1,0 +1,86 @@
+<!--
+<wc-markdown><script type="wc-content">
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+</script></wc-code>
+-->
+
+<wc-markdown><script type="wc-content">
+# classes and object oriented programming
+
+remember when we wrote stocks and stock prices in the previous exercise
+
+and we have 2 lists and accessing list data became so difficult, further this becomes even worse with many stock items 
+
+consider the following, lets have the data of a few stocks
+
+```python
+stocks = ["THYROCARE", "RELIANCE", "TTM", "AUBANK", "MMM", "S&P", "APPL"]
+stocks_open = [100.11, 200.2, 180.1, 111.33, 444.1, 122.7, 100.33]
+stocks_adj_close = [100.1, 200.1, 160.2, 120.00, 422.44, 111.3, 90.1]
+stocks_high = [110.2, 205.3, 190.3, 150.5, 455.1, 135.2, 110.2] 
+stocks_low = [95.5, 190.3, 170.3, 111.33, 440.2, 110.4, 90.4]
+```
+
+**Question [try yourself first]**
+```
+- get the index of the stock for RELIANCE, then
+- access the stock data for RELIANCE, print its open, adjclose, high and low data
+```
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+stocks = ["THYROCARE", "RELIANCE", "TTM", "AUBANK", "MMM", "S&P", "APPL"]
+stocks_open = [100.11, 200.2, 180.1, 111.33, 444.1, 122.7, 100.33]
+stocks_adj_close = [100.1, 200.1, 160.2, 120.00, 422.44, 111.3, 90.1]
+stocks_high = [110.2, 205.3, 190.3, 150.5, 455.1, 135.2, 110.2] 
+stocks_low = [95.5, 190.3, 170.3, 111.33, 440.2, 110.4, 90.4]
+
+idx = stocks.index("RELIANCE")
+print(f"RELIANCE: open: {stocks_open[idx]}, adj close: {stocks_adj_close[idx]}, high : {stocks_high[idx]}, low: {stocks_low[idx]}")
+</script></wc-code>
+
+<wc-markdown><script type="wc-content">
+but this is a very uncomfortable way to code, what we could alternatively
+do is create a stocks object class
+
+**Question**
+```
+- create a stock object class
+- create a RELIANCE stock
+- add high, low, adjclose, and open values to it
+- print values from it
+```
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+class Stock:
+  "A simple stock class"
+  def __init__(self, name, high, open, low, adjclose):
+      self.name = name
+      self.high = high
+      self.low = low
+      self.open = open
+      self.adjclose = adjclose
+
+stock = Stock(name="RELIANCE",
+              high=200.02, 
+              open=200.1, 
+              low=190.3, 
+              adjclose=170.3)
+
+print(f"RELIANCE: open: {stock.open}, adj close: {stock.adjclose}, high : {stock.high}, low: {stock.low}")
+</script></wc-code>

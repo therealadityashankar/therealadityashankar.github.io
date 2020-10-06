@@ -1,0 +1,73 @@
+<!--
+<wc-markdown><script type="wc-content">
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+</script></wc-code>
+-->
+
+<wc-markdown><script type="wc-content">
+# functions-help
+
+whenever we write code, it is important that we document it,
+
+because as humans we tend to forget stuff, so in order to make sure that
+we can come back and remember stuff, we must document our code
+
+**Question**
+
+```
+1. write a documented function that returns the fourth root of the sum of 2 numbers
+2. call help() on the function
+```
+
+**Answer**
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+def fourth_root_of_sum(a, b):
+    """
+    returns the fourth root of the sum of 2 given numbers
+
+    Parameters
+    ----------
+    a : float,
+        the first number
+
+    b : float,
+        the second number
+
+    Returns
+    -------
+    float
+        the fourth root of the sum of the given numbers
+    """
+    return (a+b)**(1/4)
+
+help(fourth_root_of_sum)
+</script></wc-code>
+
+
+<wc-markdown><script type="wc-content">
+**Question for student**
+
+```
+1. write a function that takes 2 parameters, a list and a number
+2. add the number at the end of the list with .append(num) TWICE
+3. return the list
+4. document the function
+5. call help on the function
+```
+
+---
+
+## Documentation formats,
+
+essentially python has no "standardized" documentation format,
+
+there are various documentation formats, I personally prefer to use
+NumPy docstrings, however there also exist other formats such as
+Google docstrings, reStructured Text, Epytext
+
+read more about them here : https://realpython.com/documenting-python-code/#docstring-formats
+</script></wc-markdown>
