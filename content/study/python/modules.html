@@ -1,0 +1,86 @@
+<!--
+<wc-markdown><script type="wc-content">
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+</script></wc-code>
+-->
+
+<wc-markdown><script type="wc-content">
+# python modules
+
+having all your code in one python file can be frustrating,
+so in order to make code neater, python has a "modules" system,
+
+**question**
+
+```
+1. below are 3 python scripts
+2. create a folder, in the folder put in the first 2 scripts
+3. create a folder called `efgh` inside the folder
+4. in the folder put in the 3rd script
+5. run `abc.py`, see what the output is
+6. create an `__init__.py` in the directory efgh
+7. add the code `from .ijkl import printy` to `__init__.py` file, and save it
+8. add the line `efgh.printy()` to `abc.py`
+9. run `abc.py`, see what the output is
+10. delete `__init__.py`, run `abc.py`, see what the output is
+```
+</script></wc-markdown>
+
+<wc-code mode="python" file-name="abc.py"><script type="wc-content">
+# script 1
+
+import defo
+import efgh.ijkl
+
+defo.printy()
+efgh.ijkl.printy()
+</script></wc-code>
+
+<wc-code mode="python" file-name="defo.py"><script type="wc-content">
+# script 2
+def printy():
+    print("hi this is defo !")
+</script></wc-code>
+
+<wc-code mode="python" file-name="ijkl.py"><script type="wc-content">
+# script 3
+def printy():
+    print("hi this is ijkl in efgh !")
+</script></wc-code>
+
+<wc-markdown><script type="wc-content">
+# the python standard library !
+
+python itself comes loaded with a huge number of packages that are useful for the average individual
+
+for example, check out the math library, try the code below !
+
+check out all the standard modules here https://docs.python.org/3/library/index.html
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+import math
+
+print(math.pi)
+</script></wc-code>
+
+<wc-markdown><script type="wc-content">
+for students
+
+**Question**
+1. create a folder
+2. in that folder, create a folder called `stock`
+3. in this folder create a file called `stock.py`
+4. create a Stock class that can store the name of a stock, and its current price (in a variable self.current_price), it should also accept these values in its `__init__` function and have a function in this class to increase the value of the current price by 0.01, called `price_increment()`
+5. add an appropriate `__init__.py` to also get the Stock class
+5. in the folder you created in step 1, download and save the next code, and run it
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+import stock
+
+TTM = stock.Stock("TTM", 444)
+print(TTM.current_price)
+</script></wc-code>
