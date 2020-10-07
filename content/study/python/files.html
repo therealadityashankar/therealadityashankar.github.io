@@ -1,0 +1,60 @@
+<!--
+<wc-markdown><script type="wc-content">
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+</script></wc-code>
+-->
+
+<wc-markdown><script type="wc-content">
+# the open function !
+
+python's super simple open function allows us to read/write files very very easily, this module also aims to be a simple self learning session.
+
+**Question**
+
+```
+1. create a file "some_text.txt" in a directory, add some random text in this file, ensure you atleast write 50 characters of text (50 letters)
+2. in the same directory download and add the file below, the run the python code
+try the code below:
+```
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+file = open("some_text.txt")
+text = file.read()
+print(text)
+
+# it is good practice to always call the .close() function
+file.close()
+</script></wc-code>
+
+<wc-markdown><script type="wc-content">
+## the with function
+
+we will not be getting in depth with the `with` function, but it essentially is the recommended way of interacting with files, as we may forget to write the `.close()` function
+
+below: a better alternative to the previous code
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+with open("some_text.txt") as file:
+    text = file.read()
+    print(text)
+</script></wc-code>
+
+<wc-markdown><script type="wc-content">
+## reading partially
+
+sometimes we only want to read a part of the text, this has benefits including not dumping the whole thing unnecessarily in the RAM and slowing down the computer, this is especially useful for large files
+
+try the code below
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+with open("some_text.txt") as file:
+    text = file.read(5)
+    print(text)
+    text = file.read(5)
+    print(text)
+</script></wc-code>
