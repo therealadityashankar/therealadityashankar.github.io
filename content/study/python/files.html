@@ -58,3 +58,62 @@ with open("some_text.txt") as file:
     text = file.read(5)
     print(text)
 </script></wc-code>
+
+<wc-markdown><script type="wc-content">
+## going to a point and then reading
+
+you can also go to a certain point and then read in the file
+via file.seek()
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+with open("some_text.txt") as file:
+    file.seek(35)
+    print(file.read(5))
+</script></wc-code>
+
+<wc-markdown><script type="wc-content">
+## writing to a file
+
+you may also write to a file with a second 'w' parameter
+
+NOTE : THIS CREATES A NEW FILE ! BE CAREFUL !
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+with open("some_file.txt", 'w') as file:
+    file.write("hi !")
+</script></wc-code>
+
+<wc-markdown><script type="wc-content">
+## reading and writing to a file
+
+to write to an existing file you've to use the 'r+' second parameter
+
+run the code and open the text file ou were working on !
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+with open("some_text.txt", 'r+') as file:
+    print(file.read())
+    file.write("hi !")
+</script></wc-code>
+
+<wc-markdown><script type="wc-content">
+## checking for the existance of a file, then creating it
+
+sometimes you want to create a file if it does not exist, you may do
+that by using the os module in python
+
+for example if your user is running the code for the first time, and
+you need to create a supporting file for an app
+</script></wc-markdown>
+
+<wc-code mode="python"><script type="wc-content">
+import os.path
+
+if not os.path.isfile("./some_text.txt"):
+  with open("some_text.txt", 'w') as file:
+      print(file.read())
+      file.write("hi !")
+</script></wc-code>
