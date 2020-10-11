@@ -11,36 +11,125 @@
 
       `'Python'`, `"Aditya Shankar"`, `'Jasmine'`, `"Jasmine's house"`
 
+      we can use the print() function to print stuff
+    </script>
+  </wc-markdown>
+  <wc-code mode="python">
+    <script type="wc-content">
+      # these can be directly used, or assigned to a variable and used
+      language = "python"
+
+      # you can use the print() function to print strings
+      print(language)
+      print("this is amazing !")
+    </script>
+  </wc-code>
+  <wc-markdown><script type="wc-content">
       ## Basic string building
 
       strings may start with single-quotes `'` or double-quotes `"` and have to end with the same type of quote they started with
+  </script></wc-markdown>
+  <wc-code mode="python">
+    <script type="wc-content">
+      language = "python" # start and end with double-quotes
+      game = 'football' # or single-quotes
 
+      print(language)
+      print(game)
+      print('some text')
+      print("some text")
+    </script>
+  </wc-code>
+
+  <wc-markdown><script type="wc-content">
       ## string escaping
 
       one of the obvious thing you may ask with the above task is how would you add a single-quote or a double-quote to a string, that is created using the same notation?
 
       well, you use string escaping !
 
-      for eg: `'Alex\'s grammer mistakes'`, `"he said \"I don't like this\""`
+      for putting the same start-end value, we use "\" + the quote used
 
-      string escaping also allows one to add special characters in the string, such as newlines (with "\n"), tabs (with "\t"), backslash (with "\\")
+      for eg: `'Alex\'s grammer mistakes'`, `"he said \"I don't like this\""`
+  </script></wc-markdown>
+  <wc-code mode="python"><script type="wc-content">
+      language = "python" # start and end with double-quotes
+      game = 'football' # or single-quotes
+
+      # to have the string start/end quote in the string
+      # use string escaping, i.e. "\" + quote
+      print('Alex\'s grammer mistakes')
+      print("he said \"I don't like this\"")
+
+      print(language)
+      print(game)
+      print('some text')
+      print("some text")
+  </script></wc-code>
+  <wc-markdown><script type="wc-content">
+      string escaping also allows one to add special characters in the string, such as newlines (with `"\n"`), tabs (with `"\t"`), backslash (with `"\\"`)
 
       for eg: `'I like chocolate\nHe likes cake'`, `'this is a slash - \\'`
+  </script></wc-markdown>
+  <wc-code mode="python"><script type="wc-content">
+      language = "python" # start and end with double-quotes
+      game = 'football' # or single-quotes
 
+      # to have the string start/end quote in the string
+      # use string escaping, i.e. "\" + quote
+      print('Alex\'s grammer mistakes')
+      print("he said \"I don't like this\"")
+
+      # you can use newlines via '\n' in code
+      print('I like chocolate\nHe likes cake')
+
+      # you can print a "\" by putting 2 slashes
+      print('this is a slash - \\')
+
+      print(language)
+      print(game)
+      print('some text')
+      print("some text")
+  </script></wc-code>
+  <wc-markdown><script type="wc-content">
       ## triple quoted strings
 
       you may also choose to start strings via triple quotes `"""` and `'''`, the advantage of these are that these can contain multiline texts,
 
-      so, try, 
-
       ```
-      """
       print("""abc, def, 
       ghi, jkl,
       mno""")
-      """
       ```
 
+      so, try, 
+  </script></wc-markdown>
+  <wc-code mode="python"><script type="wc-content">
+      language = "python" # start and end with double-quotes
+      game = 'football' # or single-quotes
+
+      # to have the string start/end quote in the string
+      # use string escaping, i.e. "\" + quote
+      print('Alex\'s grammer mistakes')
+      print("he said \"I don't like this\"")
+
+      # you can use newlines via '\n' in code
+      print('I like chocolate\nHe likes cake')
+
+      # you can print a "\" by putting 2 slashes
+      print('this is a slash - \\')
+
+      # triple quoted strings allow you to add slashes directly
+      print("""abc, def, 
+      ghi, jkl,
+      mno""")
+
+      print(language)
+      print(game)
+      print('some text')
+      print("some text")
+  </script></wc-code>
+  <wc-markdown><script type="wc-content">
       these are generally put in the start of documents and function definitions to show what the file does 
 
       ## r-strings
@@ -48,6 +137,8 @@
       there are some cases where string escaping makes things tougher and not easier, if, for example you need to add the literal term \n, or you need many backslashes,
 
       r-strings don't follow escaping rules and come in plainly
+
+      **the only catch is that you cannot print single slashes via r-strings**
 
       try: `print(r"abc\\d")`
 
@@ -67,7 +158,14 @@
 
       print(f"Hi my name is {name}, and my age is {age}")
       ```
+  </script></wc-markdown>
+  <wc-code mode="python"><script type="wc-content">
+      language = "python" # start and end with double-quotes
+      game = 'football' # or single-quotes
 
+      print(f"my favourite language is {language} and my favourite game is {game}")
+  </script></wc-code>
+  <wc-markdown><script type="wc-content">
       essentially all content inside is converted and formatted accordingly
 
       you may also have numeric formatting in f-strings via `f'result: {value:{width}.{precision}}'`
@@ -81,11 +179,29 @@
 
       print(f"value: {value:.2f}")
       ```
+  </script></wc-markdown>
+  <wc-code mode="python"><script type="wc-content">
+      language = "python" # start and end with double-quotes
+      game = 'football' # or single-quotes
+      favourite_number = 19
+      pi = 3.1415926535
 
+      print(f"my favourite language is {language} and my favourite game is {game}")
+      print("my favourite number is {favourite_number}")
+
+      # you can also format numbers in python
+      print(f"pi is {pi:.2f}")
+  </script></wc-code>
+  <wc-markdown><script type="wc-content">
       ### str.format is also another method to format strings
 
       `print("I have {} apples, and they're really nice".format(69))`
+  </script></wc-markdown>
+  <wc-code mode="python"><script type="wc-content">
+      print("I have {} apples, and they're really nice".format(69))
+  </script></wc-code>
 
+  <wc-markdown><script type="wc-content">
       ### extra articles
 
       real python article : https://realpython.com/python-string-formatting/#2-new-style-string-formatting-strformat
@@ -118,6 +234,40 @@
       for l in "123456":
           print(l)
       ```
+
+      string lengths may also be accessed via the `len()` function
+
+      try:
+      ```
+      print(len("123456"))
+      ```
+
+      strings are also iterable
+
+      try:
+      ```
+      for l in "123456":
+          print(l)
+      ```
     </script>
   </wc-markdown>
+
+  <wc-code mode="python"><script type="wc-content">
+      str_len = len("abcdef")
+      print(str_len)
+
+      name = "Aditya Shankar"
+      print(len(name))
+
+      # remember
+      # strings are 0-indexed, that means the
+      # first character is at 0 not 1 !
+      print(name[0])
+      print(name[5])
+
+
+      # We'll learn more about loops later, do not worry about it now !
+      for l in name:
+          print(l)
+  </script></wc-code>
 </div>
