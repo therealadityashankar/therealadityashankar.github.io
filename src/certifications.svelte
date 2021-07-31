@@ -145,4 +145,24 @@
         left:-20px;
         top:20px;
     }
+
+    @media(max-width:750px){
+        .certificate .content{
+            margin: 0 20px;
+            padding-right: 0;
+        }
+
+        .certificate .by{
+            margin-top: 20px;
+            margin-right: 0;
+        }
+
+        .certificate.certificate-2 .content{
+            padding-left: 0;
+        }
+
+        .certificate.certificate-2 .by{
+            margin-bottom: 20px;
+        }
+    }
 </style>

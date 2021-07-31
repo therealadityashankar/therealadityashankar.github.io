@@ -35,13 +35,15 @@
         max-width: max-content;
         margin: 230px auto;
         display : flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .review{
         max-width: max-content;
         background: coral;
         padding: 30px;
-        margin: 0 20px;
+        margin: 10px 20px;
     }
 
     .review.r2{
@@ -63,5 +65,11 @@
     }
     h1{
         font-size: 3rem;
+    }
+
+    @media(max-width:1250px){
+        .all{
+            margin: 50px auto;
+        }
     }
 </style>
