@@ -22,9 +22,22 @@
 <body>
 	<wc-code mode="python" id="code-stuff" style="display:none">
 		<script type="wc-content">
-		   a = 1
-		   b = 1
-		   print(a+b)
+# you can run python code in the browser
+# with an interactive setting, that makes it very easy
+# for students to use!
+def fibbonacci_at(num):
+	if num == 1 or num == 2: return 1
+	else:
+		num_1 = 1, num_2 = 1
+
+		for _ in range((num - 2)//2):
+			num_1 = num_2 + num_1
+			num_2 = num_1 + num_2
+		
+		if (num - 2)%2 == 0: return num_2
+		else: return num_1 + num_2
+		
+print(fibbonacci_at(5))
 		</script>
 	  </wc-code>
 </body>
