@@ -7,8 +7,6 @@ const allSkillsText = `
     JavaScript:5:{Languages,Frontend}
     GitHub:4:{All Encompassing}
     Svelte:3:{Frontend}:{this website is made in it}
-    React:3:{Frontend}
-    NextJS:3:{Frontend}
     Python:5:{Languages,Backend}
     Flask:5:{Backend}
     OAuth:3:{Backend,Frontend,Services}
